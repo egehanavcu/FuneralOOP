@@ -15,7 +15,12 @@ class Funeral:
         print("\n--- Family Members ---")
         for member in self.family_members:
             print(f"Name: {member.name}, Age: {member.age}, Relation: {member.relation}")
-            
+
         print("\n--- Services ---")
         for service in self.services:
             print(service.perform())
+
+        print("\nTotal Cost of the Funeral:", self.calculate_total_cost(), "Turkish Liras.")
+
+    def calculate_total_cost(self):
+        return sum(service.price for service in self.services)
