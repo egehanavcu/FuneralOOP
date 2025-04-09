@@ -23,6 +23,10 @@ class Funeral:
         for member in non_relatives:
             print(f"Name: {member.name}, Age: {member.age}, Relation: {member.relation}")
 
+        print("\n--- Condolence Messages ---")
+        for attendee in self.attendees:
+            print(attendee.say_condolence())
+            
         print("\n--- Services ---")
         for service in self.services:
             print(service.perform())
