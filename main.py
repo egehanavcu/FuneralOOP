@@ -24,3 +24,4 @@ if __name__ == "__main__":
     transport_service = TransportService("49 SVR 0961", 700)
 
     funeral = Funeral(deceased, family, cemetery, [imam_service, gassal_service, transport_service])
+    funeral.hold_funeral()
