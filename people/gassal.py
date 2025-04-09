@@ -1,4 +1,4 @@
-from models.person import Person
+from people.person import Person
 
 class Gassal(Person):
     def __init__(self, name, age, experience_years):

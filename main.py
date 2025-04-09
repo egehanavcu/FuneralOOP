@@ -1,12 +1,12 @@
-from models.deceased import Deceased
-from models.family_member import FamilyMember
-from models.imam import Imam
-from models.gassal import Gassal
-from models.cemetery import Cemetery
+from people.deceased import Deceased
+from people.family_member import FamilyMember
+from people.imam import Imam
+from people.gassal import Gassal
 from services.imam_service import ImamService
 from services.gassal_service import GassalService
 from services.transport_service import TransportService
 from funeral import Funeral
+from cemetery import Cemetery
 
 if __name__ == "__main__":
     deceased = Deceased("Ahmet Yılmaz", 75, "09.04.2025", "Heart Attack")

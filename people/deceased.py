@@ -1,4 +1,4 @@
-from models.person import Person
+from people.person import Person
 
 class Deceased(Person):
     def __init__(self, name, age, date_of_death, cause_of_death):
