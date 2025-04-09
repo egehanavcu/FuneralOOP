@@ -1,7 +1,7 @@
 class Funeral:
-    def __init__(self, deceased, family_members, cemetery, services):
+    def __init__(self, deceased, attendees, cemetery, services):
         self.deceased = deceased
-        self.family_members = family_members
+        self.attendees = attendees
         self.cemetery = cemetery
         self.services = services
 
@@ -12,8 +12,15 @@ class Funeral:
         print(f"Cause of Death: {self.deceased.cause_of_death}")
         print(f"Funeral Cemetery: {self.cemetery.name} - {self.cemetery.address}")
 
+        relatives = [attendee for attendee in self.attendees if attendee.is_relative]
+        non_relatives = [attendee for attendee in self.attendees if not attendee.is_relative]
+
         print("\n--- Family Members ---")
-        for member in self.family_members:
+        for member in relatives:
+            print(f"Name: {member.name}, Age: {member.age}, Relation: {member.relation}")
+
+        print("\n--- Other Attendees ---")
+        for member in non_relatives:
             print(f"Name: {member.name}, Age: {member.age}, Relation: {member.relation}")
 
         print("\n--- Services ---")

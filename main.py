@@ -1,5 +1,5 @@
 from people.deceased import Deceased
-from people.family_member import FamilyMember
+from people.attendee import Attendee
 from people.imam import Imam
 from people.gassal import Gassal
 from services.imam_service import ImamService
@@ -10,10 +10,12 @@ from cemetery import Cemetery
 
 if __name__ == "__main__":
     deceased = Deceased("Ahmet Yılmaz", 75, "09.04.2025", "Heart Attack")
-    family = [
-        FamilyMember("Ayşe Yılmaz", 73, "Wife"),
-        FamilyMember("Mehmet Yılmaz", 50, "Son"),
-        FamilyMember("Fatma Kaya", 48, "Daughter")
+    attendees = [
+        Attendee("Ayşe Yılmaz", 73, "Wife", True),
+        Attendee("Mehmet Yılmaz", 50, "Son", True),
+        Attendee("Fatma Kaya", 48, "Daughter", True),
+        Attendee("Emre Demir", 72, "Friend"),
+        Attendee("Emir Çelik", 74, "Friend")
     ]
     imam = Imam("Hüseyin Hodja", 55, "Istanbul Mosque")
     gassal = Gassal("Eda Gassal", 40, 11)
@@ -23,5 +25,5 @@ if __name__ == "__main__":
     gassal_service = GassalService(gassal, 400)
     transport_service = TransportService("49 SVR 0961", 700)
 
-    funeral = Funeral(deceased, family, cemetery, [imam_service, gassal_service, transport_service])
+    funeral = Funeral(deceased, attendees, cemetery, [imam_service, gassal_service, transport_service])
     funeral.hold_funeral()
