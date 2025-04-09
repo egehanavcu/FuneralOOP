@@ -6,4 +6,4 @@ class Imam(Person):
         self.mosque = mosque
 
     def pray(self):
-        return f"{self.name} has prayed to god."
+        return f"{self.name} has prayed to god at {self.mosque}."
