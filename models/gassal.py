@@ -5,5 +5,8 @@ class Gassal(Person):
         super().__init__(name, age)
         self.experience_years = experience_years
 
+    def get_role(self):
+        return "Gassal"
+
     def wash_body(self):
         return f"{self.name} ({self.experience_years} years of experience) washed the body."
