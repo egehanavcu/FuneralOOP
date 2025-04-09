@@ -5,8 +5,5 @@ class Imam(Person):
         super().__init__(name, age)
         self.mosque = mosque
 
-    def get_role(self):
-        return "İmam"
-    
     def pray(self):
         return f"{self.name} has prayed to god."

@@ -5,6 +5,3 @@ class Deceased(Person):
         super().__init__(name, age)
         self.date_of_death = date_of_death
         self.cause_of_death = cause_of_death
-
-    def get_role(self):
-        return "Deceased"

@@ -5,6 +5,3 @@ class Attendee(Person):
         super().__init__(name, age)
         self.relation = relation
         self.is_relative = is_relative
-
-    def get_role(self):
-        return "Attendee"
