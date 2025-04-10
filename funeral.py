@@ -1,9 +1,23 @@
+from people.attendee import Attendee
+
 class Funeral:
-    def __init__(self, deceased, attendees, cemetery, services):
+    def __init__(self, deceased):
         self.deceased = deceased
-        self.attendees = attendees
+        self.cemetery = None
+        self.attendees = []
+        self.services = []
+
+    def set_cemetery(self, cemetery):
         self.cemetery = cemetery
-        self.services = services
+        return self
+
+    def add_attendee(self, *args):
+        self.attendees.append(Attendee(*args))
+        return self
+    
+    def add_service(self, service):
+        self.services.append(service)
+        return self
 
     def hold_funeral(self):
         self._print_deceased_info()
@@ -43,6 +57,6 @@ class Funeral:
 
     def _print_total_cost(self):
         print("\nTotal Cost of the Funeral:", self.calculate_total_cost(), "Turkish Liras.")
-
+    
     def calculate_total_cost(self):
         return sum(service.price for service in self.services)
