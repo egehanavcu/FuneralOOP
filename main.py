@@ -2,9 +2,7 @@ from people.deceased import Deceased
 from people.attendee import Attendee
 from people.imam import Imam
 from people.gassal import Gassal
-from services.imam_service import ImamService
-from services.gassal_service import GassalService
-from services.transport_service import TransportService
+from services import ImamService, GassalService, TransportService
 from funeral import Funeral
 from cemetery import Cemetery
 
